@@ -15,7 +15,7 @@ def intcheck(check):
 print("Program ma za zadanie wyliczyć czynniki pierwsze podanej liczby naturalnej")
 
 # Pierwsze pobranie n i sprawdzenie czy jest liczbą naturalną
-n = input("Podaj liczbę do rozkładu na czynniki pierwsze")
+n = input("Podaj liczbę do rozkładu na czynniki pierwsze ")
 
 if intcheck(n) == True:
     n = int(n)
@@ -29,7 +29,7 @@ else:
 # Pobieranie n i sprawdzanie czy jest liczbą naturalną do momentu gdy użytkownik wprowadzi liczbę naturalną
 while ncheck == False:
     print("Podana wartość nie jest liczbą naturalną")
-    n = input("Podaj liczbę do rozkładu na czynniki pierwsze")
+    n = input("Podaj liczbę do rozkładu na czynniki pierwsze ")
     if intcheck(n) == True:
         n = int(n)
         if n >= 1:

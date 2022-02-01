@@ -1,2 +1,2 @@
-# School-resources
-Python programming resources
+# Zasoby szkolne
+Podstawy programowania w języku Python

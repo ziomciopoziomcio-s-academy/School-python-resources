@@ -1,5 +1,7 @@
+# Definicja zmiennych
+d = 2
 
-#Definicja funkcji
+# Definicja funkcji
 def intcheck(check):
     try:
         int(check)
@@ -8,7 +10,11 @@ def intcheck(check):
     else:
         return True
 
-#Pierwsze pobranie n i sprawdzenie czy jest liczbą naturalną
+
+# Opisanie zasad działania programu
+print("Program ma za zadanie wyliczyć czynniki pierwsze podanej liczby naturalnej")
+
+# Pierwsze pobranie n i sprawdzenie czy jest liczbą naturalną
 n = input("Podaj liczbę do rozkładu na czynniki pierwsze")
 
 if intcheck(n) == True:
@@ -19,10 +25,10 @@ if intcheck(n) == True:
         ncheck = False
 else:
     ncheck = False
-    
-#Pobieranie n i sprawdzanie czy jest liczbą naturalną do momentu gdy użytkownik wprowadzi liczbę naturalną
+
+# Pobieranie n i sprawdzanie czy jest liczbą naturalną do momentu gdy użytkownik wprowadzi liczbę naturalną
 while ncheck == False:
-    print("Podane dane nie są liczbą naturalną")
+    print("Podana wartość nie jest liczbą naturalną")
     n = input("Podaj liczbę do rozkładu na czynniki pierwsze")
     if intcheck(n) == True:
         n = int(n)
@@ -33,4 +39,16 @@ while ncheck == False:
     else:
         ncheck = False
 
-print(n)
+# Rozkład liczby na czynniki pierwsze
+if n == 1:
+    print("Liczby 1 nie da się rozłożyć na czynniki pierwsze")
+else:
+    print("Czynniki liczby ", n, ":")
+    while n > 1:
+        while n % d == 0:
+            print(d)
+            n = n / d
+        d = d + 1
+
+# Zamknięcie programu
+input("Wciśnij ENTER w celu zamknięcia programu")

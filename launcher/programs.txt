@@ -1,3 +1,2 @@
 Delta
 Sorting_list
-Decomposing_into_prime_factors

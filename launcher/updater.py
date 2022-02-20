@@ -1,9 +1,17 @@
 import requests
 list_url = "https://raw.githubusercontent.com/ziomciopoziomcio-s-academy/School-python-resources/Launcher/launcher/programs.txt"
 local_prg = "lts_prg.txt"
-r = requests.get(list_url)
+ver_list = "https://raw.githubusercontent.com/ziomciopoziomcio-s-academy/School-python-resources/Launcher/launcher/version.txt"
+local_ver = "lts_ver.txt"
+l = requests.get(list_url)
+v = requests.get(ver_list)
+
 with open(local_prg, 'wb') as file:
-    file.write(r.content)
+    file.write(l.content)
+    file.close()
+
+with open(local_ver, 'wb') as file:
+    file.write(v.content)
     file.close()
 
 def programs_list():
@@ -13,3 +21,7 @@ def programs_list():
             line = line.strip()
             list.append(line)
     return list
+
+def version_check():
+    with open(local_ver, 'r') as file:
+        return file.read().strip()

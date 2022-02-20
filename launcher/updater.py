@@ -5,16 +5,16 @@ ver_list = "https://raw.githubusercontent.com/ziomciopoziomcio-s-academy/School-
 local_ver = "lts_ver.txt"
 l = requests.get(list_url)
 v = requests.get(ver_list)
-
-with open(local_prg, 'wb') as file:
-    file.write(l.content)
-    file.close()
-
-with open(local_ver, 'wb') as file:
-    file.write(v.content)
-    file.close()
+def update():
+    with open(local_prg, 'wb') as file:
+        file.write(l.content)
+        file.close()
+    with open(local_ver, 'wb') as file:
+        file.write(v.content)
+        file.close()
 
 def programs_list():
+    update()
     list = []
     with open(local_prg, 'r') as file:
         for line in file:
@@ -23,5 +23,7 @@ def programs_list():
     return list
 
 def version_check():
+    update()
     with open(local_ver, 'r') as file:
-        return file.read().strip()
+        ver = file.read().strip()
+    return ver

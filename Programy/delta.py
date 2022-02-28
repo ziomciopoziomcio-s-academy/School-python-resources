@@ -15,6 +15,8 @@ def floatcheck(check):
         float(check)
     except ValueError:
         return False
+    else:
+        return True
 
 #Pobranie a i sprawdzenie czy to liczba
 while check != True:

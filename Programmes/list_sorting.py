@@ -11,6 +11,8 @@ def floatcheck(x):
         float(x)
     except ValueError:
         return False
+    else:
+        return True
 
 
 # Presentation of the programme guidelines

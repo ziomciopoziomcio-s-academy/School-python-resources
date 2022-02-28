@@ -8,7 +8,9 @@ def floatcheck(x):      #Definuje funkcje i podstawia otrzymane dane pod wewnęt
     try:                #Jeżeli próba się powiedziedzie to funkcja odda wartość True
         float(x)        #Sprawdzenie czy zmienna x może być ułamkiem dziesiętnym
     except ValueError:  #Jeżeli próba zwróci błąd
-        return False    #Funkcja odda False
+        return False    #Funkcja zwróci False
+    else:               #W innym przypadku
+        return True     #Funkcja zwróci True
 
 #Przedstawienie zasad działania programu
 print("Program ma za zadanie sortowanie wprowadzonych przez użytkownika liczb")

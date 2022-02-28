@@ -9,6 +9,8 @@ def floatcheck(x):
         float(x)
     except ValueError:
         return False
+    else:
+        return True
 
 #Przedstawienie zasad działania programu
 print("Program ma za zadanie sortowanie wprowadzonych przez użytkownika liczb")
